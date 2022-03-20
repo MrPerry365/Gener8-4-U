@@ -1,5 +1,10 @@
 // Assignment code here
 
+// add character options
+// define password length
+// prompt character choices
+// take character choices and randomize
+// turn randomized character choices into password
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
