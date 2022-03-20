@@ -1,6 +1,7 @@
 // Assignment code here
 
 // add character options
+// add function to generate the password
 // define password length
 // prompt character choices
 // take character choices and randomize
