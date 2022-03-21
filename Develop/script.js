@@ -15,6 +15,9 @@ function generatePassword() {
 
 // define password length
   var pwdLength = prompt("Pick a number between 8 and 128 for your password!");
+  if (pwdLength < 8 || pwdLength > 128) {
+    return ('I SAID PICK A NUMBER BETWEEN 8 AND 128!');
+  };
 
 // prompt character choices
 var special = confirm("Do you want the super secret password to have special characters it it?");
@@ -37,12 +40,14 @@ if (lowerCase) {
   passwordCharacterArray += characterChoice.lowerCase
 };
 
-}
-
-
-
+var password = '';
 // take character choices and randomize
+for(let i = 0; i < pwdLength; i++) {
+  password += passwordCharacterArray[Math.floor(Math.random()*passwordCharacterArray.length)]
+}
 // turn randomized character choices into password
+return password;
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
