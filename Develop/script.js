@@ -11,10 +11,10 @@ var characterChoice = {
 // add function to generate the password
 
 function generatePassword() {
- var passwordCharacterArray = "";
+ var passwordCharacter = "";
 
 // define password length
-  var pwdLength = prompt("Pick a number between 8 and 128 for your password!");
+var pwdLength = prompt("Pick a number between 8 and 128 for your password!");
   if (pwdLength < 8 || pwdLength > 128) {
     return ('I SAID PICK A NUMBER BETWEEN 8 AND 128!');
   };
@@ -22,28 +22,28 @@ function generatePassword() {
 // prompt character choices
 var special = confirm("Do you want the super secret password to have special characters it it?");
 if (special) {
-  passwordCharacterArray += characterChoice.special
+  passwordCharacter += characterChoice.special
 };
 
 var number = confirm("Do you want the super secret password to have numbers in it?");
 if (number) {
-  passwordCharacterArray += characterChoice.number
+  passwordCharacter += characterChoice.number
 };
 
 var upperCase = confirm("Do you want the super secret password to have upperCase characters in it?");
 if (upperCase) {
-  passwordCharacterArray += characterChoice.upperCase
+  passwordCharacter += characterChoice.upperCase
 };
 
 var lowerCase = confirm("Do you want the super secret password to have lowerCase characters in it?");
 if (lowerCase) {
-  passwordCharacterArray += characterChoice.lowerCase
+  passwordCharacter += characterChoice.lowerCase
 };
 
 var password = '';
 // take character choices and randomize
 for(let i = 0; i < pwdLength; i++) {
-  password += passwordCharacterArray[Math.floor(Math.random()*passwordCharacterArray.length)]
+  password += passwordCharacter[Math.floor(Math.random()*passwordCharacter.length)]
 }
 // turn randomized character choices into password
 return password;
